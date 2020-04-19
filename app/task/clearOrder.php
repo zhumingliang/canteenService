@@ -25,7 +25,6 @@ class clearOrder extends Task
         LogT::saveInfo(date('Y-m-d H:i:s'));
         try {
             (new OrderBusiness())->handelUnusedOrder();
-
         } catch (\Exception $e) {
             LogT::saveInfo("批量处理未订餐就餐失败：" . $e->getMessage());
 
