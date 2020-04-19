@@ -5,8 +5,20 @@
   </component>
   <component name="ProjectId" id="1ak12v4TzgI55Z2ARjgMZCpTHsH" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="330" y="56" key="CommitChangelistDialog2" timestamp="1587264747949">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="330" y="56" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1587264747949" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1587264636381">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1587264636381" />
   </component>
 </project>
