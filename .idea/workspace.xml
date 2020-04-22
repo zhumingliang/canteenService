@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ba2358bb-d3af-4866-8525-6ea1a9f9923c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/task/clearOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/task/clearOrder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/business/OrderBusiness.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/business/OrderBusiness.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +106,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587264573123</updated>
       <workItem from="1587264574771" duration="6551000" />
-      <workItem from="1587524943280" duration="199000" />
+      <workItem from="1587524943280" duration="1150000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1587264607602</created>
@@ -164,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587280302233</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="测试批量处理订单">
+      <created>1587525262256</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587525262256</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,17 +192,17 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1587276212197" />
-    <state x="330" y="56" key="CommitChangelistDialog2" timestamp="1587280302037">
+    <state x="330" y="56" key="CommitChangelistDialog2" timestamp="1587525262093">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="330" y="56" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1587280302037" />
+    <state x="330" y="56" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1587525262093" />
     <state x="530" y="310" key="NewPhpClassDialog" timestamp="1587279459584">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="530" y="310" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1587279459584" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1587280308155">
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1587525270255">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1587280308155" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1587525270255" />
   </component>
 </project>

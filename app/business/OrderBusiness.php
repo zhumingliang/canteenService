@@ -27,15 +27,15 @@ class OrderBusiness
                             'id' => $v['id'],
                             'used' => 1,
                             'consumption_type' => 'no_meals_ordered',
-                            'money' => 'no_meal_money',
-                            'sub_money' => 'no_meal_sub_money'
+                            'money' => $v['no_meal_money'],
+                            'sub_money' => $v['no_meal_sub_money']
                         ]);
                     } else {
                         array_push($dataList, [
                             'id' => $v['id'],
                             'used' => 1,
                             'consumption_type' => 'no_meals_ordered',
-                            'sub_money' => 'no_meal_sub_money'
+                            'sub_money' => $v['no_meal_sub_money']
                         ]);
                     }
 
