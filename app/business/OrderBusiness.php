@@ -4,6 +4,7 @@
 namespace app\business;
 
 
+use app\lib\enum\CommonEnum;
 use app\model\OrderT;
 use app\model\OrderUnusedV;
 
@@ -16,16 +17,10 @@ class OrderBusiness
         $orders = OrderUnusedV::orders($consumption_time);
         if (count($orders)) {
             foreach ($orders as $k => $v) {
-                if ($v['consumption_type'] == "no_meals_ordered") {
-                    array_push($dataList, [
-                        'id' => $v['id'],
-                        'used' => 1
-                    ]);
-                } else {
-                    if ($v['fixed'] == 1) {
+                if ($v['consumption_type'] != "no_meals_ordered") {
+                    if ($v['fixed'] == CommonEnum::STATE_IS_OK) {
                         array_push($dataList, [
                             'id' => $v['id'],
-                            'used' => 1,
                             'consumption_type' => 'no_meals_ordered',
                             'money' => $v['no_meal_money'],
                             'sub_money' => $v['no_meal_sub_money']
@@ -33,7 +28,6 @@ class OrderBusiness
                     } else {
                         array_push($dataList, [
                             'id' => $v['id'],
-                            'used' => 1,
                             'consumption_type' => 'no_meals_ordered',
                             'sub_money' => $v['no_meal_sub_money']
                         ]);
@@ -45,5 +39,6 @@ class OrderBusiness
             (new OrderT())->saveAll($dataList);
         }
     }
+
 
 }

@@ -81,7 +81,7 @@ class AliSms implements SmsBase
 
     }
 
-    public static function sendTemplate(string $phone, string $type, array $params)
+    public static function sendTemplate(string $phone, string $type, array $params,string $sign)
     {
         if (empty($phone) || empty($params) || empty($type)) {
             return false;

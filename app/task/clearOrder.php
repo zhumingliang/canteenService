@@ -22,7 +22,6 @@ class clearOrder extends Task
      */
     protected function execute()
     {
-        LogT::saveInfo(date('Y-m-d H:i:s'));
         try {
             (new OrderBusiness())->handelUnusedOrder();
         } catch (\Exception $e) {
