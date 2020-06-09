@@ -17,24 +17,12 @@ class OrderBusiness
         $orders = OrderUnusedV::orders($consumption_time);
         if (count($orders)) {
             foreach ($orders as $k => $v) {
-                if ($v['consumption_type'] != "no_meals_ordered") {
-                    if ($v['fixed'] == CommonEnum::STATE_IS_OK) {
-                        array_push($dataList, [
-                            'id' => $v['id'],
-                            'consumption_type' => 'no_meals_ordered',
-                            'money' => $v['no_meal_money'],
-                            'sub_money' => $v['no_meal_sub_money']
-                        ]);
-                    } else {
-                        array_push($dataList, [
-                            'id' => $v['id'],
-                            'consumption_type' => 'no_meals_ordered',
-                            'sub_money' => $v['no_meal_sub_money']
-                        ]);
-                    }
-
-                }
-
+                array_push($dataList, [
+                    'id' => $v['id'],
+                    'consumption_type' => 'no_meals_ordered',
+                    'money' => 0,
+                    'sub_money' => $v['no_meal_sub_money']
+                ]);
             }
             (new OrderT())->saveAll($dataList);
         }
