@@ -21,6 +21,7 @@ class OrderBusiness
                     'id' => $v['id'],
                     'consumption_type' => 'no_meals_ordered',
                     'money' => 0,
+                    'unused_handel' => CommonEnum::STATE_IS_OK,
                     'sub_money' => $v['no_meal_sub_money']
                 ]);
             }
