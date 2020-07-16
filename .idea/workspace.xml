@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba2358bb-d3af-4866-8525-6ea1a9f9923c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/aliyun.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/aliyun.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +124,7 @@
       <workItem from="1593502746489" duration="449000" />
       <workItem from="1593530482796" duration="28000" />
       <workItem from="1593609989402" duration="834000" />
-      <workItem from="1594893607809" duration="67000" />
+      <workItem from="1594893607809" duration="241000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1587264607602</created>
