@@ -9,7 +9,7 @@
 return [
     'host' => 'dysmsapi.aliyuncs.com',
     'access_key_id' => 'LTAILmoLeYr2tPg9',
-    'access_key_secret' => 'IGyopSctAoahUva0wP4wYDOMBuz4aq',
+    'access_key_secret' => '*',
     'region_id' => 'cn-hangzhou',
     'template_code' => 'SMS_166310720',
     'sign_name' => '盟蚁网络科技',
