@@ -16,3 +16,4 @@ Route::get('think', function () {
 
 Route::get('hello/:name', 'index/hello');
 Route::post('notify/weixin', 'notify.weixin/index');
+Route::post('image/save', 'Image/upload');
