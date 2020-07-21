@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba2358bb-d3af-4866-8525-6ea1a9f9923c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/business/ImageBusiness.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controller/Image.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +125,8 @@
       <workItem from="1593502746489" duration="449000" />
       <workItem from="1593530482796" duration="28000" />
       <workItem from="1593609989402" duration="834000" />
-      <workItem from="1594893607809" duration="326000" />
+      <workItem from="1594893607809" duration="978000" />
+      <workItem from="1595318889738" duration="2000000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1587264607602</created>
@@ -224,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594893902895</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="忽略数据库配置文件">
+      <created>1594893985450</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1594893985450</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,32 +245,33 @@
     <MESSAGE value="测试批量处理订单" />
     <MESSAGE value="修复定时处理未就餐订单" />
     <MESSAGE value="测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试" />
+    <MESSAGE value="忽略数据库配置文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="忽略数据库配置文件" />
   </component>
   <component name="WindowStateProjectService">
     <state x="301" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587279509554">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="301" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1587279509554" />
-    <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590975558162">
+    <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1595320457411">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1590975558162" />
-    <state x="330" y="39" key="CommitChangelistDialog2" timestamp="1594893902668">
+    <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1595320457411" />
+    <state x="330" y="39" key="CommitChangelistDialog2" timestamp="1594893985299">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="330" y="39" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1594893902668" />
-    <state x="530" y="310" key="NewPhpClassDialog" timestamp="1590976386767">
+    <state x="330" y="39" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1594893985299" />
+    <state x="530" y="310" key="NewPhpClassDialog" timestamp="1595320439974">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="530" y="310" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1590976386767" />
+    <state x="530" y="310" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1595320439974" />
     <state width="625" height="500" key="SwitcherDM" timestamp="1590976169353">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="625" height="500" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1590976169353" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1594893910703">
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1594893990061">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1594893910703" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1594893990061" />
   </component>
 </project>
