@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba2358bb-d3af-4866-8525-6ea1a9f9923c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/business/ReceptionBusiness.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/Date.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/ReceptionQrcodeV.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/ReceptionT.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/ReceptionV.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/Index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/task/clearOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/task/clearOrder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/route/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/route/app.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +128,7 @@
       <workItem from="1594893607809" duration="978000" />
       <workItem from="1595318889738" duration="2536000" />
       <workItem from="1595349887792" duration="187000" />
-      <workItem from="1595693663764" duration="3266000" />
+      <workItem from="1595693663764" duration="3460000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1587264607602</created>
@@ -255,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595349972329</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="定时处理过期接待票">
+      <created>1595728295686</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1595728295686</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +271,8 @@
     <MESSAGE value="忽略数据库配置文件" />
     <MESSAGE value="数据库配置文件" />
     <MESSAGE value="增加图片服务" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加图片服务" />
+    <MESSAGE value="定时处理过期接待票" />
+    <option name="LAST_COMMIT_MESSAGE" value="定时处理过期接待票" />
   </component>
   <component name="WindowStateProjectService">
     <state x="301" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595727937161">
@@ -281,10 +283,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1595728269759" />
-    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2" timestamp="1595349972201">
+    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2" timestamp="1595728295485">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1595349972201" />
+    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1595728295485" />
     <state x="530" y="310" key="NewPhpClassDialog" timestamp="1595727686660">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -293,9 +295,9 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="625" height="500" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1590976169353" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1595349979640">
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1595728301949">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1595349979640" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1595728301949" />
   </component>
 </project>
