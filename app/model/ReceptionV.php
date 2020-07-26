@@ -12,7 +12,7 @@ class ReceptionV extends Model
     public function getYestDayUnHandel()
     {
 
-        $list = self::where('status', CommonEnum::STATE_IS_OK)
+        $list = $this->where('status', '=', CommonEnum::STATE_IS_OK)
             ->select();
         return $list;
 
