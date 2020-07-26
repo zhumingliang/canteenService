@@ -18,7 +18,7 @@ class ReceptionBusiness
     public function handelReception()
     {
         //$day = Date::reduceDay(1, date('Y-m-d'));
-        $receptions = ReceptionV::getYestDayUnHandel();
+        $receptions = (new ReceptionV())->getYestDayUnHandel();
         print_r($receptions);
         $dataList = [];
         if (count($receptions)) {

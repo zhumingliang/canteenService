@@ -9,7 +9,7 @@ use think\Model;
 
 class ReceptionV extends Model
 {
-    public static function getYestDayUnHandel()
+    public function getYestDayUnHandel()
     {
 
         $list = self::where('status', CommonEnum::STATE_IS_OK)

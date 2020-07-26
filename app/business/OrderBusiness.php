@@ -14,7 +14,7 @@ class OrderBusiness
     {
         $consumption_time = date('Y-m-d');
         $dataList = [];
-        $orders = OrderUnusedV::orders($consumption_time);
+        $orders = (new  OrderUnusedV())->orders($consumption_time);
         if (count($orders)) {
             foreach ($orders as $k => $v) {
                 array_push($dataList, [
