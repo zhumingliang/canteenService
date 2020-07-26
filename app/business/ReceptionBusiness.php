@@ -19,7 +19,6 @@ class ReceptionBusiness
     {
         //$day = Date::reduceDay(1, date('Y-m-d'));
         $receptions = (new ReceptionV())->getYestDayUnHandel();
-        print_r($receptions);
         $dataList = [];
         if (count($receptions)) {
             foreach ($receptions as $k => $v) {
@@ -32,8 +31,6 @@ class ReceptionBusiness
             }
 
         }
-
-        print_r($dataList);
 
         if (count($dataList)) {
             (new ReceptionT())->saveAll($dataList);
