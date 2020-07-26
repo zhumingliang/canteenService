@@ -3,6 +3,7 @@
 namespace app\controller;
 
 use app\BaseController;
+use app\business\ReceptionBusiness;
 use app\model\AuthT;
 use app\model\LogT;
 use think\facade\Cache;
@@ -12,7 +13,8 @@ class Index extends BaseController
 {
     public function index(Request $request)
     {
-        LogT::saveInfo(1);
+        (new ReceptionBusiness())->handelReception();
+
 
         //echo  array_sum(array_column([['price'=>1],['price'=>3]], 'price'));
     }
