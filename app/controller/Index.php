@@ -3,6 +3,7 @@
 namespace app\controller;
 
 use app\BaseController;
+use app\business\BackupBusiness;
 use app\business\ReceptionBusiness;
 use app\model\AuthT;
 use app\model\LogT;
@@ -13,8 +14,7 @@ class Index extends BaseController
 {
     public function index(Request $request)
     {
-        (new ReceptionBusiness())->handelReception();
-
+        (new BackupBusiness())->backupMysql();
 
         //echo  array_sum(array_column([['price'=>1],['price'=>3]], 'price'));
     }
