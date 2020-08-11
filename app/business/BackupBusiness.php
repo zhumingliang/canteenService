@@ -11,6 +11,7 @@ class BackupBusiness
     public function backupMysql()
     {
         $backupdir = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'backup' . DIRECTORY_SEPARATOR . date('Ymdhis');
+        echo $backupdir;
         if (!is_dir($backupdir)) {
             mkdir($backupdir, 0777, true);
         }
