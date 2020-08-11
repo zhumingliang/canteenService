@@ -618,6 +618,48 @@
         "description": "An adapter decorator to enable meta-data caching."
     },
     {
+        "name": "lotofbadcode/phpspirit_databackup",
+        "version": "v1.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/lotofbadcode/phpspirit_databackup.git",
+            "reference": "30c79e3a650cb379906503846a64ace878ba6316"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/lotofbadcode/phpspirit_databackup/zipball/30c79e3a650cb379906503846a64ace878ba6316",
+            "reference": "30c79e3a650cb379906503846a64ace878ba6316",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0"
+        },
+        "time": "2019-12-05T06:36:31+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "phpspirit\\databackup\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "代码庸医",
+                "email": "3359964266@qq.com"
+            }
+        ],
+        "description": "一个PHP数据库备份恢复的插件",
+        "keywords": [
+            "library",
+            "php"
+        ]
+    },
+    {
         "name": "lunzi/tp-sms",
         "version": "v0.1.0",
         "version_normalized": "0.1.0.0",

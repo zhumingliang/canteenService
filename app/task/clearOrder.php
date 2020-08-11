@@ -4,6 +4,7 @@
 namespace app\task;
 
 
+use app\business\BackupBusiness;
 use app\business\OrderBusiness;
 use app\business\ReceptionBusiness;
 use app\model\LogT;
@@ -26,6 +27,7 @@ class clearOrder extends Task
         try {
             (new OrderBusiness())->handelUnusedOrder();
             (new ReceptionBusiness())->handelReception();
+            (new BackupBusiness())->backupMysql();
         } catch (\Exception $e) {
             LogT::saveInfo("批量处理未订餐就餐失败：" . $e->getMessage());
         }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d3b11d7c6a6acda6858a0a49d64252f8",
+    "content-hash": "ce4f6984016f48db9aeaa29eaf48d572",
     "packages": [
         {
             "name": "adbario/php-dot-notation",
@@ -603,6 +603,46 @@
             ],
             "description": "An adapter decorator to enable meta-data caching.",
             "time": "2018-07-09T20:51:04+00:00"
+        },
+        {
+            "name": "lotofbadcode/phpspirit_databackup",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lotofbadcode/phpspirit_databackup.git",
+                "reference": "30c79e3a650cb379906503846a64ace878ba6316"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lotofbadcode/phpspirit_databackup/zipball/30c79e3a650cb379906503846a64ace878ba6316",
+                "reference": "30c79e3a650cb379906503846a64ace878ba6316",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "phpspirit\\databackup\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "代码庸医",
+                    "email": "3359964266@qq.com"
+                }
+            ],
+            "description": "一个PHP数据库备份恢复的插件",
+            "keywords": [
+                "library",
+                "php"
+            ],
+            "time": "2019-12-05T06:36:31+00:00"
         },
         {
             "name": "lunzi/tp-sms",

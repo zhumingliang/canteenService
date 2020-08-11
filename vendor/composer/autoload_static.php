@@ -37,6 +37,10 @@ class ComposerStaticInitf9cbae28cf63931be848cf3c8d046ad0
             'think\\app\\' => 10,
             'think\\' => 6,
         ),
+        'p' => 
+        array (
+            'phpspirit\\databackup\\' => 21,
+        ),
         'l' => 
         array (
             'lunzi\\' => 6,
@@ -139,6 +143,10 @@ class ComposerStaticInitf9cbae28cf63931be848cf3c8d046ad0
             2 => __DIR__ . '/..' . '/topthink/think-helper/src',
             3 => __DIR__ . '/..' . '/topthink/think-orm/src',
             4 => __DIR__ . '/..' . '/topthink/think-queue/src',
+        ),
+        'phpspirit\\databackup\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/lotofbadcode/phpspirit_databackup/src',
         ),
         'lunzi\\' => 
         array (
