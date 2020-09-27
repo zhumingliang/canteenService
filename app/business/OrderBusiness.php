@@ -15,10 +15,8 @@ class OrderBusiness
     public function handelUnusedOrder()
     {
         $consumption_time = date('Y-m-d');
-        $oneDataList = [];
-        $moreDataList = [];
-        $parentDataList = [];
         $orders = (new  OrderUnusedV())->orders($consumption_time);
+        $parentMoneyArr = [];
         if (count($orders)) {
             foreach ($orders as $k => $v) {
                 if ($v['strategy_type'] == 'one') {
@@ -27,9 +25,7 @@ class OrderBusiness
                         'unused_handel' => CommonEnum::STATE_IS_OK,
                         'sub_money' => $v['no_meal_sub_money']], ['id' => $v['id']]);
 
-                }
-                else {
-
+                } else {
                     OrderSubT::update([
                         'consumption_type' => 'no_meals_ordered',
                         'money' => 0,
@@ -37,8 +33,16 @@ class OrderBusiness
                         'sub_money' => $v['no_meal_sub_money']
                     ], ['id' => $v['id']]);
 
-                    OrderParentT::update(['money' => $v['parent_money'] - $v['order_money'] - $v['order_sub_money'] + $v['no_meal_sub_money'],
+                    if (key_exists($v['order_id'], $parentMoneyArr)) {
+                        $parentMoney = $parentMoneyArr[$v['order_id']];
+                    } else {
+                        $parentMoney = $v['parent_money'];
+                    }
+                    $newParentMoney = $parentMoney - $v['order_money'] - $v['order_sub_money'] + $v['no_meal_sub_money'];
+                    OrderParentT::update(['money' => $newParentMoney
                     ], ['id' => $v['order_id']]);
+
+                    $parentMoneyArr[$v['order_id']] = $newParentMoney;
 
                 }
 
