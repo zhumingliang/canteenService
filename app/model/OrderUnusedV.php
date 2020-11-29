@@ -13,7 +13,7 @@ class OrderUnusedV //extends Model
     public static function orders($consumption_time)
     {
 
-        $statistic =  Db::name('canteen_order_t')
+        $statistic =  Db::name('order_t')
             ->alias('a')
             ->field('a.id,a.id as order_id,"one" as strategy_type,a.consumption_type,
             a.no_meal_money,a.no_meal_sub_money,a.money as parent_money,a.sub_money as parent_sub_money,
