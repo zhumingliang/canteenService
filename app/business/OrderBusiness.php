@@ -87,7 +87,6 @@ class OrderBusiness
                 if ($v['no_meal_sub_money'] > 0) {
                     (new AccountBusiness())->saveAccountRecords($v['consumption_date'], $v['canteen_id'], $v['no_meal_sub_money'], $v['strategy_type'],
                         $v['id'], $v['company_id'], $v['staff_id'], $v['dinner']);
-
                 }
             }
         }
