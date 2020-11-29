@@ -57,7 +57,6 @@ class OrderBusiness
         $consumption_time = date('Y-m-d');
         //一次消费订单+非外卖多次扣费子订单
         $orders = (new  OrderUnusedV())->orders($consumption_time);
-        print_r($orders);
         $parentMoneyArr = [];
         if (count($orders)) {
             foreach ($orders as $k => $v) {
@@ -118,7 +117,7 @@ class OrderBusiness
                 if (!$updateSub) {
                     throw new UpdateException(['msg' => "更新子订单失败"]);
                 }
-                OrderParentT::update(['money' => $allMoney, ['id' => $v['id']]]);
+                OrderParentT::update(['money' => $allMoney,'used'=>CommonEnum::STATE_IS_OK], ['id' => $v['id']]);
                 if ($allMoney > 0) {
                     (new AccountBusiness())->saveAccountRecords($v['consumption_date'], $v['canteen_id'], $allMoney, 'more',
                         $v['id'], $v['company_id'], $v['staff_id'], $v['dinner']['name'], 1);
