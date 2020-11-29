@@ -57,6 +57,7 @@ class OrderBusiness
         $consumption_time = date('Y-m-d');
         //一次消费订单+非外卖多次扣费子订单
         $orders = (new  OrderUnusedV())->orders($consumption_time);
+        print_r($orders);
         $parentMoneyArr = [];
         if (count($orders)) {
             foreach ($orders as $k => $v) {
@@ -91,8 +92,10 @@ class OrderBusiness
             }
         }
 
+
         //外卖多次扣费子订单
         $parentOrders = OrderParentT::unUsed($consumption_time);
+        print_r($parentOrders);
         if (count($parentOrders)) {
             foreach ($parentOrders as $k => $v) {
                 $subOrder = OrderSubT::where('order_id', $v['id'])
