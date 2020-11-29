@@ -5,21 +5,15 @@ namespace app\model;
 
 
 use app\lib\enum\CommonEnum;
-use think\Facade\Db;
+use think\facade\Db;
 use think\Model;
 
-class OrderUnusedV extends Model
+class OrderUnusedV //extends Model
 {
-    public function orders2($consumption_time)
-    {
-        $statistic = $this->where('ordering_date', '<', $consumption_time)
-            ->select();
-        return $statistic;
-    }
-
     public static function orders($consumption_time)
     {
-        $statistic = Db::name('canteen_order_t')
+
+        $statistic =  Db::name('canteen_order_t')
             ->alias('a')
             ->field('a.id,a.id as order_id,"one" as strategy_type,a.consumption_type,
             a.no_meal_money,a.no_meal_sub_money,a.money as parent_money,a.sub_money as parent_sub_money,
