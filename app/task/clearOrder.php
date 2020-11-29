@@ -27,7 +27,6 @@ class clearOrder extends Task
         try {
             (new OrderBusiness())->handelUnusedOrder();
             (new ReceptionBusiness())->handelReception();
-            // (new BackupBusiness())->backupMysql();
         } catch (\Exception $e) {
             LogT::saveInfo("批量处理未订餐就餐失败：" . $e->getMessage());
         }
