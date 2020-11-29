@@ -85,7 +85,7 @@ class OrderBusiness
                     $parentMoneyArr[$v['order_id']] = $newParentMoney;
                 }
                 if ($v['no_meal_sub_money'] > 0) {
-                    (new AccountBusiness())->saveAccountRecords($v['consumption_date'], $v['canteen_id'], $v['no_meal_sub_money'], $v['strategy_type'],
+                    (new AccountBusiness())->saveAccountRecords($v['ordering_date'], $v['canteen_id'], $v['no_meal_sub_money'], $v['strategy_type'],
                         $v['id'], $v['company_id'], $v['staff_id'], $v['dinner']);
                 }
             }
@@ -119,7 +119,7 @@ class OrderBusiness
                 OrderParentT::update(['money' => $allMoney,'unused_handel'=>CommonEnum::STATE_IS_OK],
                     ['id' => $v['id']]);
                 if ($allMoney > 0) {
-                    (new AccountBusiness())->saveAccountRecords($v['consumption_date'], $v['canteen_id'], $allMoney, 'more',
+                    (new AccountBusiness())->saveAccountRecords($v['ordering_date'], $v['canteen_id'], $allMoney, 'more',
                         $v['id'], $v['company_id'], $v['staff_id'], $v['dinner']['name'], 1);
 
                 }
