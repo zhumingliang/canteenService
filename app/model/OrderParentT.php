@@ -17,6 +17,7 @@ class OrderParentT extends Model
     public static function unUsed($consumption_time)
     {
         return self::where('used', CommonEnum::STATE_IS_FAIL)
+            ->where('unused_handel', CommonEnum::STATE_IS_FAIL)
             ->where('ordering_date', '<', $consumption_time)
             ->where('pay', 'paid')
             ->where('state', CommonEnum::STATE_IS_OK)

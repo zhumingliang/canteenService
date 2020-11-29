@@ -117,7 +117,7 @@ class OrderBusiness
                 if (!$updateSub) {
                     throw new UpdateException(['msg' => "更新子订单失败"]);
                 }
-                OrderParentT::update(['money' => $allMoney,'used'=>CommonEnum::STATE_IS_OK], ['id' => $v['id']]);
+                OrderParentT::update(['money' => $allMoney,'unused_handel'=>CommonEnum::STATE_IS_OK], ['id' => $v['id']]);
                 if ($allMoney > 0) {
                     (new AccountBusiness())->saveAccountRecords($v['consumption_date'], $v['canteen_id'], $allMoney, 'more',
                         $v['id'], $v['company_id'], $v['staff_id'], $v['dinner']['name'], 1);
