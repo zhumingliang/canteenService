@@ -39,7 +39,7 @@ class OrderUnusedV //extends Model
                     ->where('a.used', CommonEnum::STATE_IS_FAIL)
                     ->where('a.unused_handel', CommonEnum::STATE_IS_FAIL)
                     ->where('a.state', CommonEnum::STATE_IS_OK)
-                    ->where('b.type', 2);
+                    ->where('b.type', 1);
             })->select()->toArray();
         return $statistic;
     }

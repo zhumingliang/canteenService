@@ -108,6 +108,7 @@ class OrderBusiness
                         'id' => $v['id'],
                         'consumption_type' => 'no_meals_ordered',
                         'money' => 0,
+                        'delivery_fee' => 0,
                         'unused_handel' => CommonEnum::STATE_IS_OK,
                         'sub_money' => $v2['no_meal_sub_money']
                     ]);
@@ -116,7 +117,7 @@ class OrderBusiness
                 if (!$updateSub) {
                     throw new UpdateException(['msg' => "更新子订单失败"]);
                 }
-                OrderParentT::update(['money' => $allMoney,'unused_handel'=>CommonEnum::STATE_IS_OK],
+                OrderParentT::update(['money' => $allMoney, 'delivery_fee' => 0, 'unused_handel' => CommonEnum::STATE_IS_OK],
                     ['id' => $v['id']]);
                 if ($allMoney > 0) {
                     (new AccountBusiness())->saveAccountRecords($v['ordering_date'], $v['canteen_id'], $allMoney, 'more',
