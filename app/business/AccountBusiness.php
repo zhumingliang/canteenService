@@ -8,11 +8,16 @@ use app\model\AccountRecordsT;
 use app\model\CompanyAccountT;
 use app\lib\enum\CommonEnum;
 use app\lib\exception\SaveException;
+use app\model\CompanyT;
 
 class AccountBusiness
 {
     public function saveAccountRecords($consumptionDate, $canteenId, $money, $type, $orderId, $companyId, $staffId, $typeName, $outsider = 2)
     {
+        $company = CompanyT::company($companyId);
+        if ($company->account_status == CommonEnum::STATE_IS_FAIL) {
+            return true;
+        }
         $accounts = $this->getAccountBalance($companyId, $staffId);
         $data = [];
         foreach ($accounts as $k => $v) {
