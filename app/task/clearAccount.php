@@ -11,7 +11,7 @@ class clearAccount extends Task
 {
     public function configure()
     {
-        $this->at("11:10:00");
+        $this->at("23:10:00");
         //设置任务的周期，每天执行一次，更多的方法可以查看源代码，都有注释
     }
 
