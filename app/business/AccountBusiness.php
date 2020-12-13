@@ -37,6 +37,20 @@ class AccountBusiness
                     'type_name' => $typeName
                 ]);
             } else {
+                array_push($data, [
+                    'account_id' => $v['id'],
+                    'company_id' => $companyId,
+                    'consumption_date' => $consumptionDate,
+                    'location_id' => $canteenId,
+                    'used' => CommonEnum::STATE_IS_OK,
+                    'status' => CommonEnum::STATE_IS_OK,
+                    'staff_id' => $staffId,
+                    'type' => $type,
+                    'order_id' => $orderId,
+                    'money' => 0 - $v['balance'],
+                    'outsider' => $outsider,
+                    'type_name' => $typeName
+                ]);
                 $money -= $v['balance'];
             }
         }
