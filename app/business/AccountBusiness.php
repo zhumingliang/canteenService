@@ -32,7 +32,7 @@ class AccountBusiness
                     'staff_id' => $staffId,
                     'type' => $type,
                     'order_id' => $orderId,
-                    'money' => $money,
+                    'money' => 0-$money,
                     'outsider' => $outsider,
                     'type_name' => $typeName
                 ]);

@@ -155,14 +155,8 @@
       <workItem from="1607880918396" duration="62000" />
       <workItem from="1607881002716" duration="220000" />
       <workItem from="1607909186811" duration="169000" />
-      <workItem from="1607910930046" duration="10000" />
-    </task>
-    <task id="LOCAL-00001" summary="初始化">
-      <created>1587264607602</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1587264607602</updated>
+      <workItem from="1607910930046" duration="125000" />
+      <workItem from="1607962972335" duration="35000" />
     </task>
     <task id="LOCAL-00002" summary="初始化">
       <created>1587264777294</created>
@@ -500,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607909220048</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="测试清零账户">
+      <created>1607910954905</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1607910954905</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,18 +527,18 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1606630666383" />
-    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2" timestamp="1607909219863">
+    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2" timestamp="1607910954722">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1607909219863" />
+    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1607910954722" />
     <state x="530" y="310" key="NewPhpClassDialog" timestamp="1607093150414">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="530" y="310" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1607093150414" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1607909222357">
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1607910956474">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1607909222357" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1607910956474" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
