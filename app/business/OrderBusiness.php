@@ -105,10 +105,9 @@ class OrderBusiness
                 foreach ($subOrder as $k2 => $v2) {
                     $allMoney += $v2['no_meal_sub_money'];
                     array_push($subList, [
-                        'id' => $v['id'],
+                        'id' => $v2['id'],
                         'consumption_type' => 'no_meals_ordered',
                         'money' => 0,
-                        'delivery_fee' => 0,
                         'unused_handel' => CommonEnum::STATE_IS_OK,
                         'sub_money' => $v2['no_meal_sub_money']
                     ]);
