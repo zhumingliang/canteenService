@@ -36,6 +36,7 @@ class AccountBusiness
                     'outsider' => $outsider,
                     'type_name' => $typeName
                 ]);
+                break;
             } else {
                 if ($v['balance'] > 0) {
                     array_push($data, [
