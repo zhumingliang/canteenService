@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ba2358bb-d3af-4866-8525-6ea1a9f9923c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/business/OrderBusiness.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/business/OrderBusiness.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/OrderParentT.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/OrderParentT.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/task/clearAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/task/clearAccount.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,14 +157,9 @@
       <workItem from="1607909186811" duration="169000" />
       <workItem from="1607910930046" duration="125000" />
       <workItem from="1607962972335" duration="552000" />
-      <workItem from="1608193798360" duration="267000" />
-    </task>
-    <task id="LOCAL-00004" summary="初始化">
-      <created>1587268182896</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1587268182896</updated>
+      <workItem from="1608193798360" duration="569000" />
+      <workItem from="1608197079167" duration="191000" />
+      <workItem from="1608197372269" duration="199000" />
     </task>
     <task id="LOCAL-00005" summary="初始化">
       <created>1587273682390</created>
@@ -503,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607963728960</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="测试清零账户">
+      <created>1608194143110</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1608194143110</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,18 +530,18 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1606630666383" />
-    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2" timestamp="1607963728758">
+    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2" timestamp="1608194142922">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1607963728758" />
+    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1608194142922" />
     <state x="530" y="310" key="NewPhpClassDialog" timestamp="1607093150414">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="530" y="310" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1607093150414" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1607963730419">
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1608194145205">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1607963730419" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1608194145205" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
