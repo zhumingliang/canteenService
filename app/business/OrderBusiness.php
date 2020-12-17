@@ -93,7 +93,7 @@ class OrderBusiness
 
 
         //外卖多次扣费子订单
-        $parentOrders = OrderParentT::unUsed($consumption_time);
+        $parentOrders = OrderParentT::unUsedOutsiderOrder($consumption_time);
         if (count($parentOrders)) {
             foreach ($parentOrders as $k => $v) {
                 $subOrder = OrderSubT::where('order_id', $v['id'])

@@ -14,10 +14,11 @@ class OrderParentT extends Model
         return $this->belongsTo('DinnerT', 'dinner_id', 'id');
     }
 
-    public static function unUsed($consumption_time)
+    public static function unUsedOutsiderOrder($consumption_time)
     {
         return self::where('used', CommonEnum::STATE_IS_FAIL)
             ->where('unused_handel', CommonEnum::STATE_IS_FAIL)
+            ->where('type', 2)
             ->where('ordering_date', '<', $consumption_time)
             ->where('pay', 'paid')
             ->where('state', CommonEnum::STATE_IS_OK)
