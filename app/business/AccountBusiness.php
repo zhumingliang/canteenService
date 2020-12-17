@@ -32,7 +32,7 @@ class AccountBusiness
                     'staff_id' => $staffId,
                     'type' => $type,
                     'order_id' => $orderId,
-                    'money' => 0-$money,
+                    'money' => 0 - $money,
                     'outsider' => $outsider,
                     'type_name' => $typeName
                 ]);
@@ -82,6 +82,21 @@ class AccountBusiness
             $accounts[$k]['balance'] = $balance;
         }
         return $accounts;
+
+    }
+
+    public function clearAccounts()
+    {
+        //获取需要清除余额的账户
+        $account = CompanyAccountT::clearAccounts();
+        if (!count($account)) {
+            return true;
+        }
+        foreach ($account as $k => $v) {
+            $accountId = $v['id'];
+            //获取账户所有用户的余额
+            $staffBalance = AccountRecordsT::staffBalance($accountId);
+        }
 
     }
 
