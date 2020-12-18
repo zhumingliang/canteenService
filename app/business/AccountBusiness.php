@@ -90,7 +90,7 @@ class AccountBusiness
     public function clearAccounts()
     {
 
-        Db::startTrans();
+        (new Db())->startTrans();
         try {
             //获取需要清除余额的账户
             $account = CompanyAccountT::clearAccounts();
@@ -138,11 +138,11 @@ class AccountBusiness
                 CompanyAccountT::update(['next_time' => $nextTime], ['id' => $accountId]);
             }
 
-            Db::commit();
+            (new Db())->commit();
         } catch (\Exception $e) {
             LogT::saveInfo("账户清零失败：" . $e->getMessage());
 
-            Db::rollback();
+            (new Db())->rollback();
         }
     }
 
