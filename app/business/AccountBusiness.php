@@ -94,12 +94,13 @@ class AccountBusiness
         try {
             //获取需要清除余额的账户
             $account = CompanyAccountT::clearAccounts();
-            print_r($account);
+
             if (!count($account)) {
                 return true;
             }
             foreach ($account as $k => $v) {
                 $accountId = $v['id'];
+                echo $accountId;
                 //检测是否清零时间
                 if (!$this->checkClearTime($v['next_time'])) {
                     continue;
@@ -152,6 +153,8 @@ class AccountBusiness
     {
         $now = strtotime(date('Y-m-d H:i'));
         $nextTime = strtotime(date('Y-m-d H:i', strtotime($nextTime)));
+        echo $now;
+        echo $nextTime;
         if ($now == $nextTime) {
             return true;
         }
