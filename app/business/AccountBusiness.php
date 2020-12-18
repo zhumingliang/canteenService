@@ -100,7 +100,9 @@ class AccountBusiness
             }
             foreach ($account as $k => $v) {
                 $accountId = $v['id'];
-                echo $accountId;
+                if ($accountId != 208) {
+                    continue;
+                }
                 //检测是否清零时间
                 if (!$this->checkClearTime($v['next_time'])) {
                     continue;
@@ -156,6 +158,8 @@ class AccountBusiness
         echo $now;
         echo $nextTime;
         if ($now == $nextTime) {
+            echo $now;
+            echo $nextTime;
             return true;
         }
         return false;
