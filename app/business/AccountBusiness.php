@@ -110,8 +110,8 @@ class AccountBusiness
                 $clearData = [];
                 //获取账户所有用户的余额
                 $staffBalance = AccountRecordsT::staffBalance($accountId);
-                print_r($staffBalance);
                 if (!count($staffBalance)) {
+                    echo 1;
                     continue;
                 }
                 foreach ($staffBalance as $k2 => $v2) {
@@ -132,7 +132,9 @@ class AccountBusiness
                         ]);
                     }
 
+
                 }
+                print_r($clearData);
                 if (count($clearData)) {
                     (new AccountRecordsT())->saveAll($clearData);
                 }
