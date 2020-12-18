@@ -94,6 +94,7 @@ class AccountBusiness
         try {
             //获取需要清除余额的账户
             $account = CompanyAccountT::clearAccounts();
+            print_r($account);
             if (!count($account)) {
                 return true;
             }
@@ -106,6 +107,7 @@ class AccountBusiness
                 $clearData = [];
                 //获取账户所有用户的余额
                 $staffBalance = AccountRecordsT::staffBalance($accountId);
+                print_r($staffBalance);
                 if (!count($staffBalance)) {
                     continue;
                 }
