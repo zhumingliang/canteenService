@@ -9,11 +9,11 @@ use app\model\CompanyAccountT;
 use app\model\LogT;
 use yunwuxin\cron\Task;
 
-class clearAccount extends Task
+class clearAccount2 extends Task
 {
     public function configure()
     {
-        $this->dailyAt("00:00:01");
+        $this->dailyAt("23:50:00");
     }
 
     /**

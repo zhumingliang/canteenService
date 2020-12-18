@@ -3,6 +3,7 @@
 namespace app\controller;
 
 use app\BaseController;
+use app\business\AccountBusiness;
 use app\business\BackupBusiness;
 use app\business\OrderBusiness;
 use app\business\ReceptionBusiness;
@@ -12,14 +13,14 @@ use app\model\AuthT;
 use app\model\LogT;
 use think\facade\Cache;
 use think\Request;
+use function AlibabaCloud\Client\envConversion;
 
 class Index extends BaseController
 {
     public function index(Request $request)
     {
-        $accountId = $request->param('account_id');
-        $staffBalance = AccountRecordsT::staffBalance($accountId);
-        return json(new SuccessMessageWithData(['data' => $staffBalance]));
+        echo 1111;
+        (new AccountBusiness())->clearAccounts();
     }
 
     public function hello($name = 'ThinkPHP6')
