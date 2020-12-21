@@ -100,9 +100,6 @@ class AccountBusiness
             }
             foreach ($account as $k => $v) {
                 $accountId = $v['id'];
-                if ($accountId != 208) {
-                    continue;
-                }
                 //检测是否清零时间
                 if (!$this->checkClearTime($v['next_time'])) {
                     continue;
@@ -111,7 +108,6 @@ class AccountBusiness
                 //获取账户所有用户的余额
                 $staffBalance = AccountRecordsT::staffBalance($accountId);
                 if (!count($staffBalance)) {
-                    echo 1;
                     continue;
                 }
                 foreach ($staffBalance as $k2 => $v2) {
@@ -126,7 +122,7 @@ class AccountBusiness
                             'staff_id' => $v2['staff_id'],
                             'type' => 'clear',
                             'order_id' => 0,
-                            'money' => 0 - $v['balance'],
+                            'money' => 0 - $v2['money'],
                             'outsider' => 2,
                             'type_name' => "到期清零"
                         ]);
@@ -134,7 +130,6 @@ class AccountBusiness
 
 
                 }
-                print_r($clearData);
                 if (count($clearData)) {
                     (new AccountRecordsT())->saveAll($clearData);
                 }
