@@ -4,12 +4,14 @@
 namespace app\business;
 
 
+use app\lib\Http;
 use app\model\AccountRecordsT;
 use app\model\CompanyAccountT;
 use app\lib\enum\CommonEnum;
 use app\lib\exception\SaveException;
 use app\model\CompanyT;
 use app\model\LogT;
+use app\model\TaskLogT;
 use think\Db;
 
 class AccountBusiness
@@ -152,11 +154,7 @@ class AccountBusiness
     {
         $now = strtotime(date('Y-m-d H:i'));
         $nextTime = strtotime(date('Y-m-d H:i', strtotime($nextTime)));
-        echo $now;
-        echo $nextTime;
         if ($now == $nextTime) {
-            echo $now;
-            echo $nextTime;
             return true;
         }
         return false;
@@ -213,6 +211,40 @@ class AccountBusiness
                 return reduceDay(1, $nextYearBegin) . ' ' . "23:59";
             }
         }
+    }
+
+
+    public function checkClearAccountAndSendTemplate()
+    {
+        try {
+            //获取需要清除余额的账户
+            $account = CompanyAccountT::clearAccounts();
+            $clearAccount = [];
+            if (!count($account)) {
+                return $clearAccount;
+            }
+            foreach ($account as $k => $v) {
+                if (addDay(3, time()) == date('Y-m-d', strtotime($v['next_time']))) {
+                    array_push($clearAccount, $v['id']);
+                }
+
+            }
+            if (count($clearAccount)) {
+                $ids = implode(',', $clearAccount);
+                $sendData = [
+                    'type' => "account",
+                    'id' => $ids
+                ];
+                $url = config('setting.sendTemplateUrl');
+                $res = Http::post($url, $sendData);
+                TaskLogT::create(['content' => '账户清零通知：' . json_encode($res)]);
+
+            }
+        } catch (\Exception $e) {
+            TaskLogT::create(['content' => '账户清零通知失败：' . $e->getMessage()]);
+        }
+
+
     }
 
 

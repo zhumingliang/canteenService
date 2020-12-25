@@ -8,11 +8,11 @@ use app\business\AccountBusiness;
 use app\model\LogT;
 use yunwuxin\cron\Task;
 
-class clearAccount extends Task
+class sendClearMsg extends Task
 {
     public function configure()
     {
-        $this->dailyAt("00:00:01");
+        $this->dailyAt("08:00:01");
     }
 
     /**
@@ -21,7 +21,6 @@ class clearAccount extends Task
      */
     protected function execute()
     {
-        LogT::create(['content' => '清除账户信息']);
-        (new AccountBusiness())->clearAccounts();
+        (new AccountBusiness())->checkClearAccountAndSendTemplate();
     }
 }

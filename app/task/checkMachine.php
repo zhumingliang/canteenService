@@ -5,14 +5,16 @@ namespace app\task;
 
 
 use app\business\AccountBusiness;
+use app\business\MachineBusiness;
 use app\model\LogT;
+use app\model\TaskLogT;
 use yunwuxin\cron\Task;
 
-class clearAccount extends Task
+class checkMachine extends Task
 {
     public function configure()
     {
-        $this->dailyAt("00:00:01");
+        $this->dailyAt("05:45:00");
     }
 
     /**
@@ -21,7 +23,7 @@ class clearAccount extends Task
      */
     protected function execute()
     {
-        LogT::create(['content' => '清除账户信息']);
-        (new AccountBusiness())->clearAccounts();
+        TaskLogT::create(['content' => '设备在线检测']);
+        (new MachineBusiness())->checkMachineOnline();
     }
 }
