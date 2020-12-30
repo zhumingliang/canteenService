@@ -232,7 +232,7 @@ class AccountBusiness
             if (count($clearAccount)) {
                 $ids = implode(',', $clearAccount);
                 $sendData = [
-                    'type' => "account",
+                    'type' => "clearAccount",
                     'id' => $ids
                 ];
                 $url = config('setting.sendTemplateUrl');

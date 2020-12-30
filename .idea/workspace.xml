@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ba2358bb-d3af-4866-8525-6ea1a9f9923c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/business/MachineBusiness.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/business/MachineBusiness.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cron.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cron.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/business/AccountBusiness.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/business/AccountBusiness.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/task/sendClearMsg.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/task/sendClearMsg.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,14 +178,7 @@
       <workItem from="1608312898232" duration="2015000" />
       <workItem from="1608347168714" duration="3000" />
       <workItem from="1608513237006" duration="10794000" />
-      <workItem from="1609254236735" duration="1894000" />
-    </task>
-    <task id="LOCAL-00016" summary="增加图片服务">
-      <created>1595346930186</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1595346930186</updated>
+      <workItem from="1609254236735" duration="2381000" />
     </task>
     <task id="LOCAL-00017" summary="增加图片服务">
       <created>1595349972329</created>
@@ -523,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608882423261</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="自动清零测试">
+      <created>1609308679556</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1609308679556</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,7 +543,8 @@
     <MESSAGE value="测试清零账户" />
     <MESSAGE value="测试" />
     <MESSAGE value="到期清理更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="到期清理更新" />
+    <MESSAGE value="自动清零测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="自动清零测试" />
   </component>
   <component name="WindowStateProjectService">
     <state x="300" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608515544776">
@@ -554,14 +555,14 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="634" y="231" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1608698815683" />
-    <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608864524476">
+    <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609308900506">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1608864524476" />
-    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2" timestamp="1608882422996">
+    <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1609308900506" />
+    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2" timestamp="1609308679391">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1608882422996" />
+    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1609308679391" />
     <state x="530" y="310" key="NewPhpClassDialog" timestamp="1608863039664">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -574,10 +575,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="625" height="500" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1608704995546" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1608882424845">
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1609308682083">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1608882424845" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1609308682083" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
