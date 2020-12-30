@@ -15,6 +15,7 @@ class MachineBusiness
     {
 
         try {
+            TaskLogT::create(['content' => '消费机在线检测开始']);
             $machines = MachineT::check();
             $returnId = '';
             if ($machines) {
