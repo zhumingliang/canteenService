@@ -13,7 +13,7 @@ class sendClearMsg extends Task
 {
     public function configure()
     {
-        $this->dailyAt("08:00:01");
+        $this->dailyAt("08:01");
     }
 
     /**

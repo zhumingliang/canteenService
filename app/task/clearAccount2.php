@@ -13,7 +13,7 @@ class clearAccount2 extends Task
 {
     public function configure()
     {
-        $this->dailyAt("23:50:00");
+        $this->dailyAt("23:50");
     }
 
     /**
