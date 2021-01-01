@@ -5,6 +5,7 @@ namespace app\controller;
 use app\BaseController;
 use app\business\AccountBusiness;
 use app\business\BackupBusiness;
+use app\business\MachineBusiness;
 use app\business\OrderBusiness;
 use app\business\ReceptionBusiness;
 use app\lib\exception\SuccessMessageWithData;
@@ -19,8 +20,7 @@ class Index extends BaseController
 {
     public function index(Request $request)
     {
-        echo 1111;
-        (new AccountBusiness())->clearAccounts();
+        (new MachineBusiness())->checkMachineOnline();
     }
 
     public function hello($name = 'ThinkPHP6')
@@ -28,4 +28,7 @@ class Index extends BaseController
 
         //  return 'hello,' . $name;
     }
+
+
+
 }
