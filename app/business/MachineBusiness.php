@@ -31,16 +31,12 @@ class MachineBusiness
             }
             if (strlen($returnId)) {
                 $sendData = [
-                    'type'=>'machine',
+                    'type' => 'machine',
                     'id' => $returnId
                 ];
-                $url =Config::get('setting.domain');
-                echo $url;
-              //  $url ='http://test-api.51canteen.cn/api/v1/service/template';
-               /* echo $url;
+                $url = Config::get('setting.sendTemplateUrl');
                 $res = Http::post($url, $sendData);
-                print_r($res);
-                TaskLogT::create(['content' => '消费机在线检测通知1：' . json_encode($res)]);*/
+                TaskLogT::create(['content' => '消费机在线检测通知1：' . json_encode($res)]);
 
             }
         } catch (\Exception $e) {
