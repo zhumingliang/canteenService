@@ -8,6 +8,7 @@ use app\lib\Http;
 use app\model\CompanyAccountT;
 use app\model\MachineT;
 use app\model\TaskLogT;
+use think\facade\Config;
 
 class MachineBusiness
 {
@@ -33,13 +34,13 @@ class MachineBusiness
                     'type'=>'machine',
                     'id' => $returnId
                 ];
-                print_r($sendData);
-               // $url = config('setting.domain').'/api/v1/service/template';
-                $url ='http://test-api.51canteen.cn/api/v1/service/template';
+                $url =Config::get('setting.sendTemplateUrl');
                 echo $url;
+              //  $url ='http://test-api.51canteen.cn/api/v1/service/template';
+               /* echo $url;
                 $res = Http::post($url, $sendData);
                 print_r($res);
-                TaskLogT::create(['content' => '消费机在线检测通知1：' . json_encode($res)]);
+                TaskLogT::create(['content' => '消费机在线检测通知1：' . json_encode($res)]);*/
 
             }
         } catch (\Exception $e) {
