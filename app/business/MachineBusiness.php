@@ -34,7 +34,7 @@ class MachineBusiness
                     'type'=>'machine',
                     'id' => $returnId
                 ];
-                $url =Config::get('setting.sendTemplateUrl');
+                $url =Config::get('setting.domain');
                 echo $url;
               //  $url ='http://test-api.51canteen.cn/api/v1/service/template';
                /* echo $url;
