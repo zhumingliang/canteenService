@@ -40,7 +40,6 @@ class MachineBusiness
 
             }
         } catch (\Exception $e) {
-            echo $e->getMessage();
             TaskLogT::create(['content' => '消费机在线检测通知2：' . $e->getMessage()]);
         }
 
