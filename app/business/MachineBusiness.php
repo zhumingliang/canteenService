@@ -34,7 +34,8 @@ class MachineBusiness
                     'id' => $returnId
                 ];
                 print_r($sendData);
-                $url = config('setting.domain').'/api/v1/service/template';
+               // $url = config('setting.domain').'/api/v1/service/template';
+                $url ='http://test-api.51canteen.cn/api/v1/service/template';
                 echo $url;
                 $res = Http::post($url, $sendData);
                 print_r($res);
