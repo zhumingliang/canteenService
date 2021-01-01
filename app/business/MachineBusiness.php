@@ -33,7 +33,9 @@ class MachineBusiness
                     'type'=>'machine',
                     'id' => $returnId
                 ];
+                print_r($sendData);
                 $url = config('setting.sendTemplateUrl');
+                echo $url;
                 $res = Http::post($url, $sendData);
                 print_r($res);
                 TaskLogT::create(['content' => '消费机在线检测通知1：' . json_encode($res)]);

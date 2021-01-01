@@ -16,7 +16,6 @@ class Http
     public static function post($url, $params = [], $options = [])
     {
         $req = self::sendRequest($url, $params, 'POST', $options);
-        print_r($req);
         return $req['ret'] ? $req['msg'] : '';
     }
 
