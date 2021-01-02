@@ -237,6 +237,7 @@ class AccountBusiness
                 ];
                 $url = config('setting.sendTemplateUrl');
                 $res = Http::post($url, $sendData);
+                $sendData['res'] = $res;
                 TaskLogT::create(['content' => '账户清零通知：' . json_encode($res)]);
 
             }
