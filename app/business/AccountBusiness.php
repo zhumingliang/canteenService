@@ -229,6 +229,7 @@ class AccountBusiness
                 }
 
             }
+            var_dump($clearAccount);
             if (count($clearAccount)) {
                 $ids = implode(',', $clearAccount);
                 $sendData = [
