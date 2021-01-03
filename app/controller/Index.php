@@ -20,7 +20,7 @@ class Index extends BaseController
 {
     public function index(Request $request)
     {
-        (new MachineBusiness())->checkMachineOnline();
+        (new AccountBusiness())->checkClearAccountAndSendTemplate();
     }
 
     public function hello($name = 'ThinkPHP6')

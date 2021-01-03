@@ -23,7 +23,6 @@ class sendClearMsg extends Task
     protected function execute()
     {
         TaskLogT::create(['content' => '清零通知']);
-
         (new AccountBusiness())->checkClearAccountAndSendTemplate();
     }
 }
