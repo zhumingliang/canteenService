@@ -224,7 +224,7 @@ class AccountBusiness
                 return $clearAccount;
             }
             foreach ($account as $k => $v) {
-                if (addDay(3, time()) == date('Y-m-d', strtotime($v['next_time']))) {
+                if (addDay(3,  date('Y-m-d')) == date('Y-m-d', strtotime($v['next_time']))) {
                     array_push($clearAccount, $v['id']);
                 }
 
