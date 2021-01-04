@@ -37,11 +37,11 @@ class MachineBusiness
                 $url = Config::get('setting.sendTemplateUrl');
                 $res = Http::post($url, $sendData);
                 $sendData['res'] = $res;
-                TaskLogT::create(['content' => '消费机在线检测通知1：' . json_encode($sendData)]);
+                TaskLogT::create(['content' => '消费机在线检测通知：' . json_encode($sendData)]);
 
             }
         } catch (\Exception $e) {
-            TaskLogT::create(['content' => '消费机在线检测通知2：' . $e->getMessage()]);
+            TaskLogT::create(['content' => '消费机在线检测通知：' . $e->getMessage()]);
         }
 
 
