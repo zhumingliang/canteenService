@@ -61,11 +61,12 @@ class NextMonthPayBusiness
     {
         try {
             $companys = NextmonthPaySettingT::where('state', CommonEnum::STATE_IS_OK)
+                ->where('remind_time',CommonEnum::STATE_IS_OK)
                 ->field('group_concat(c_id) as c_ids')
                 ->select()->toArray();
             if (!empty($companys)) {
-               /* $template = OfficialTemplateT::where('type', 'payment')->find();
-                $type = $template->template_id;*/
+                /* $template = OfficialTemplateT::where('type', 'payment')->find();
+                 $type = $template->template_id;*/
                 $c_ids = $companys[0]['c_ids'];
                 //请求接口--begin
                 $sendData = [
