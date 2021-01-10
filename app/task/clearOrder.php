@@ -8,6 +8,7 @@ use app\business\BackupBusiness;
 use app\business\OrderBusiness;
 use app\business\ReceptionBusiness;
 use app\model\LogT;
+use app\model\TaskLogT;
 use yunwuxin\cron\Task;
 
 class clearOrder extends Task
@@ -28,7 +29,7 @@ class clearOrder extends Task
             (new OrderBusiness())->handelUnusedOrder();
             (new ReceptionBusiness())->handelReception();
         } catch (\Exception $e) {
-            LogT::saveInfo("批量处理未订餐就餐失败：" . $e->getMessage());
+            TaskLogT::saveInfo("批量处理未订餐就餐失败：" . $e->getMessage());
         }
 
     }

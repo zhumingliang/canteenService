@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba2358bb-d3af-4866-8525-6ea1a9f9923c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/business/FoodBusiness.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/lib/enum/FoodEnum.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/AutomaticFoodT.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/AutomaticT.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/FoodDayStateT.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/Index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/task/checkMachine2.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/task/checkMachine2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/task/sendClearMsg.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/task/sendClearMsg.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cron.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cron.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/task/clearAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/task/clearAccount.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/task/clearAccount2.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/task/clearAccount2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/task/clearOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/task/clearOrder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,16 +102,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/lib/enum" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/lib/enum" />
       <recent name="$PROJECT_DIR$/app/business" />
       <recent name="$PROJECT_DIR$/app/model" />
       <recent name="$PROJECT_DIR$/app/task" />
       <recent name="$PROJECT_DIR$/config" />
-      <recent name="$PROJECT_DIR$/app/lib" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -198,14 +202,8 @@
       <workItem from="1609859033003" duration="842000" />
       <workItem from="1609916985860" duration="1060000" />
       <workItem from="1610030307982" duration="327000" />
-      <workItem from="1610286451033" duration="16000" />
-    </task>
-    <task id="LOCAL-00038" summary="优化凌晨扣费">
-      <created>1606632566789</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1606632566789</updated>
+      <workItem from="1610286451033" duration="299000" />
+      <workItem from="1610289122611" duration="1870000" />
     </task>
     <task id="LOCAL-00039" summary="优化凌晨扣费">
       <created>1606632867755</created>
@@ -543,7 +541,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609814669668</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="缴费通知">
+      <created>1610286492034</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1610286492034</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -576,18 +581,18 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="634" y="231" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1608698815683" />
-    <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609769490685">
+    <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610291012756">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1609769490685" />
-    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2" timestamp="1609814669511">
+    <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1610291012756" />
+    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2" timestamp="1610286491829">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1609814669511" />
-    <state x="530" y="310" key="NewPhpClassDialog" timestamp="1608863039664">
+    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1610286491829" />
+    <state x="530" y="310" key="NewPhpClassDialog" timestamp="1610290827588">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="530" y="310" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1608863039664" />
+    <state x="530" y="310" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1610290827588" />
     <state x="613" y="440" key="NewPhpFileDialog" timestamp="1608688525351">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -596,10 +601,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="625" height="500" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1608704995546" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1609814671121">
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1610286494146">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1609814671121" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1610286494146" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
