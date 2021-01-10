@@ -23,7 +23,8 @@ class Index extends BaseController
     public function index(Request $request)
     {
         TaskLogT::create(['content' => '发送缴费提醒消息']);
-        (new NextMonthPayBusiness())->remind();    }
+        (new NextMonthPayBusiness())->remind();
+    }
 
     public function hello($name = 'ThinkPHP6')
     {

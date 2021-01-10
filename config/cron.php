@@ -9,5 +9,6 @@ return [
         \app\task\checkMachine::class,
         \app\task\checkMachine2::class,
         \app\task\checkMachine3::class,
+        \app\task\getNextMonthPay::class,
     ]
 ];

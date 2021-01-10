@@ -27,6 +27,6 @@ class sendClearMsg extends Task
         (new AccountBusiness())->checkClearAccountAndSendTemplate();
 
         TaskLogT::create(['content' => '发送缴费提醒消息']);
-        (new NextMonthPayBusiness())->remind();
+       // (new NextMonthPayBusiness())->remind();
     }
 }

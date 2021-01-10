@@ -14,7 +14,7 @@ class checkMachine2 extends Task
 {
     public function configure()
     {
-        $this->dailyAt("10:00");
+        $this->dailyAt("11:00");
     }
 
     /**
