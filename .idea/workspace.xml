@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba2358bb-d3af-4866-8525-6ea1a9f9923c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/business/FoodBusiness.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/enum/FoodEnum.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/AutomaticFoodT.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/AutomaticT.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/FoodDayStateT.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/task/clearAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/task/clearAccount.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/task/clearAccount2.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/task/clearAccount2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/task/clearOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/task/clearOrder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/task/sendClearMsg.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/task/sendClearMsg.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +95,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/lib/enum" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -203,14 +196,9 @@
       <workItem from="1609916985860" duration="1060000" />
       <workItem from="1610030307982" duration="327000" />
       <workItem from="1610286451033" duration="299000" />
-      <workItem from="1610289122611" duration="1870000" />
-    </task>
-    <task id="LOCAL-00039" summary="优化凌晨扣费">
-      <created>1606632867755</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1606632867755</updated>
+      <workItem from="1610289122611" duration="1993000" />
+      <workItem from="1611066209272" duration="131000" />
+      <workItem from="1611319902821" duration="4000" />
     </task>
     <task id="LOCAL-00040" summary="优化凌晨扣费">
       <created>1606672692559</created>
@@ -548,7 +536,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610286492034</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="自动上架">
+      <created>1610291122586</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1610291122586</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,7 +565,8 @@
     <MESSAGE value="到期清理更新" />
     <MESSAGE value="自动清零测试" />
     <MESSAGE value="缴费通知" />
-    <option name="LAST_COMMIT_MESSAGE" value="缴费通知" />
+    <MESSAGE value="自动上架" />
+    <option name="LAST_COMMIT_MESSAGE" value="自动上架" />
   </component>
   <component name="WindowStateProjectService">
     <state x="300" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608515544776">
@@ -585,10 +581,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1610291012756" />
-    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2" timestamp="1610286491829">
+    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2" timestamp="1610291122387">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1610286491829" />
+    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1610291122387" />
     <state x="530" y="310" key="NewPhpClassDialog" timestamp="1610290827588">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -601,10 +597,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="625" height="500" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1608704995546" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1610286494146">
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1610291124136">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1610286494146" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1610291124136" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
