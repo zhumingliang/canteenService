@@ -25,6 +25,7 @@ class clearAccount extends Task
     {
         TaskLogT::create(['content' => '清除账户信息']);
         (new AccountBusiness())->clearAccounts();
+
         TaskLogT::create(['content' => '自动上架菜品']);
         (new FoodBusiness())->autoUpFoods();
     }

@@ -45,7 +45,7 @@ class NextMonthPayBusiness
                             'order_money' => $v2['order_money'],
                             'order_count' => $v2['order_count'],
                             'staff_id' => $v2['staff_id'],
-                            'pay_method' => $v2['pay_method'],
+                            'pay_date' => date('Y-m', strtotime($v2['consumption_date']))
                         ]);
                     }
                     $save = (new NextmonthPayT())->saveAll($orderConsumptionList);
