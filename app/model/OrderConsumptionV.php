@@ -15,6 +15,7 @@ class OrderConsumptionV extends Model
         $list = self::where('company_id', $c_id)
             ->where('year(consumption_date) ='. $dateArr[0])
             ->where('month(consumption_date) ='.$dateArr[1])
+            ->where('type',1)
             ->select()
             ->toArray();
         return $list;
