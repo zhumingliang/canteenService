@@ -14,7 +14,8 @@ class getNextMonthPay extends Task
 {
     public function configure()
     {
-        $this->monthlyOn(); //设置任务的周期，每月初执行一次
+        $this->dailyAt("00:45");
+       // $this->monthlyOn(); //设置任务的周期，每月初执行一次
     }
 
     /**
