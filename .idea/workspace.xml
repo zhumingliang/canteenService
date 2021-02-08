@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba2358bb-d3af-4866-8525-6ea1a9f9923c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/business/FoodBusiness.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/business/FoodBusiness.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/Index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,14 +205,7 @@
       <workItem from="1611647770974" duration="371000" />
       <workItem from="1611668685738" duration="243000" />
       <workItem from="1612109358130" duration="1405000" />
-      <workItem from="1612794399019" duration="1959000" />
-    </task>
-    <task id="LOCAL-00046" summary="测试清零账户">
-      <created>1607094337001</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1607094337001</updated>
+      <workItem from="1612794399019" duration="2054000" />
     </task>
     <task id="LOCAL-00047" summary="测试清零账户">
       <created>1607094353653</created>
@@ -551,7 +543,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612111763245</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="自动上架更新">
+      <created>1612798220214</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1612798220214</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -575,7 +574,8 @@
     <MESSAGE value="缴费通知" />
     <MESSAGE value="自动上架" />
     <MESSAGE value="次月缴费更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="次月缴费更新" />
+    <MESSAGE value="自动上架更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="自动上架更新" />
   </component>
   <component name="WindowStateProjectService">
     <state x="300" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608515544776">
@@ -586,15 +586,15 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="634" y="231" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1608698815683" />
-    <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612798189789">
+    <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612798295534">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1612798189789" />
+    <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1612798295534" />
     <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1610291012756" />
-    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2" timestamp="1612111763021">
+    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2" timestamp="1612798219838">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="330" y="23" key="CommitChangelistDialog2/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1612111763021" />
+    <state x="330" y="23" key="CommitChangelistDialog2/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1612798219838" />
     <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1610291122387" />
     <state x="530" y="310" key="NewPhpClassDialog" timestamp="1610290827588">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -608,10 +608,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="625" height="500" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1608704995546" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1612111765146">
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1612798221554">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1612111765146" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1612798221554" />
     <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1610291124136" />
   </component>
   <component name="XDebuggerManager">

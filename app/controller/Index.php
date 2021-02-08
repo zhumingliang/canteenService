@@ -5,6 +5,7 @@ namespace app\controller;
 use app\BaseController;
 use app\business\AccountBusiness;
 use app\business\BackupBusiness;
+use app\business\FoodBusiness;
 use app\business\MachineBusiness;
 use app\business\NextMonthPayBusiness;
 use app\business\OrderBusiness;
@@ -23,9 +24,11 @@ class Index extends BaseController
     public function index(Request $request)
     {
         try {
-            (new NextMonthPayBusiness())->handle();
+           // (new NextMonthPayBusiness())->handle();
+            TaskLogT::create(['content' => '自动上架菜品']);
+            (new FoodBusiness())->autoUpFoods();
         } catch (\Exception $e) {
-            TaskLogT::create(['content' => "同步次月缴费数据失败：" . $e->getMessage()]);
+            TaskLogT::create(['content' => "自动上架菜品：" . $e->getMessage()]);
         }
     }
 
