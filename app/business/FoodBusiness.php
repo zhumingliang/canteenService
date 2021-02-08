@@ -6,6 +6,8 @@ namespace app\business;
 
 use app\lib\enum\CommonEnum;
 use app\lib\enum\FoodEnum;
+use app\lib\exception\ParameterException;
+use app\lib\exception\SaveException;
 use app\model\AutomaticT;
 use app\model\FoodDayStateT;
 use app\model\TaskLogT;
@@ -41,42 +43,43 @@ class FoodBusiness
         $dinnerId = $auto['dinner_id'];
         $foodDay = FoodDayStateT::FoodStatus($canteenId, $dinnerId, $day);
         $foodList = [];
-        if (!count($auto)) {
+        $alreadyFoods = [];
+        if (count($foodDay)) {
+            foreach ($foodDay as $k => $v) {
+                if (in_array([$v['f_id']], $alreadyFoods)) {
+                    continue;
+                }
+                if ($v['status'] != FoodEnum::STATUS_DOWN) {
+                    array_push($foodList, [
+                        'id' => $v['id'],
+                        'status' => FoodEnum::STATUS_UP
+                    ]);
+                }
+                array_push($alreadyFoods, $v['f_id']);
+            }
+        }
+
+        if ($auto) {
+            if (!count($auto['foods'])) {
+                throw new ParameterException(['msg' => "自动上架菜品未设置"]);
+            }
             $autoFoods = $auto['foods'];
             foreach ($autoFoods as $k => $v) {
-                if (!count($foodDay)) {
-                    array_push($foodList, [
-                        'f_id' => $v['food_id'],
-                        'status' => FoodEnum::STATUS_UP,
-                        'day' => $day,
-                        'user_id' => 0,
-                        'canteen_id' => $canteenId,
-                        'default' => CommonEnum::STATE_IS_FAIL,
-                        'dinner_id' => $dinnerId
-                    ]);
-                } else {
-                    $exit = false;
-                    foreach ($foodDay as $k2 => $v2) {
-                        if ($v['food_id'] == $v2['f_id']) {
-                            $exit = true;
-                            unset($foodDay[$k2]);
-                            break;
-                        }
-                    }
-                    if (!$exit) {
-                        array_push($foodList, [
-                            'f_id' => $v['food_id'],
-                            'status' => FoodEnum::STATUS_UP,
-                            'day' => $day,
-                            'user_id' => 0,
-                            'canteen_id' => $canteenId,
-                            'default' => CommonEnum::STATE_IS_FAIL,
-                            'dinner_id' => $dinnerId
-                        ]);
-                    }
+                if (in_array([$v['food_id']], $alreadyFoods)) {
+                    continue;
                 }
-            }
+                array_push($foodList, [
+                    'f_id' => $v['food_id'],
+                    'status' => FoodEnum::STATUS_UP,
+                    'day' => $day,
+                    'user_id' => 0,
+                    'canteen_id' => $canteenId,
+                    'default' => CommonEnum::STATE_IS_FAIL,
+                    'dinner_id' => $dinnerId
+                ]);
+                array_push($alreadyFoods, $v['food_id']);
 
+            }
         }
 
         if (count($foodList)) {
@@ -91,21 +94,8 @@ class FoodBusiness
 
     private function getRepeatDay($repeatWeek)
     {
-        $w = date('w');
+        $w = date('w') == 0 ? 7 : date('w');
         $repeatWeek = $repeatWeek == 0 ? 7 : $repeatWeek;
-        if ($w == 0) {
-            //今日这周日
-            return date('Y-m-d', strtotime('+' . $repeatWeek . ' day', time()));
+        return addDay(7 + ($repeatWeek - $w), \date('Y-m-d'));
 
-        } else {
-            if ($w <= $repeatWeek) {
-                return date('Y-m-d', strtotime('+' . ($repeatWeek - $w) . ' day', time()));
-            } else {
-                return date('Y-m-d', strtotime('+' . (7 - abs($w - $repeatWeek)) . ' day', time()));
-
-            }
-        }
-
-
-    }
-}
+    }}
