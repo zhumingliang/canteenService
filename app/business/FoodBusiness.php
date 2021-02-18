@@ -44,9 +44,10 @@ class FoodBusiness
         $foodDay = FoodDayStateT::FoodStatus($canteenId, $dinnerId, $day);
         $foodList = [];
         $alreadyFoods = [];
+        $cancelFoods = [];
         if (count($foodDay)) {
             foreach ($foodDay as $k => $v) {
-                if (in_array([$v['f_id']], $alreadyFoods)) {
+                if (in_array([$v['f_id']], $alreadyFoods)||in_array([$v['f_id']], $cancelFoods)) {
                     continue;
                 }
                 if ($v['status'] != FoodEnum::STATUS_DOWN) {
@@ -54,6 +55,11 @@ class FoodBusiness
                         'id' => $v['id'],
                         'status' => FoodEnum::STATUS_UP
                     ]);
+                    array_push($alreadyFoods, $v['f_id']);
+
+                }else{
+                    array_push($cancelFoods, $v['f_id']);
+
                 }
                 array_push($alreadyFoods, $v['f_id']);
             }
@@ -65,7 +71,7 @@ class FoodBusiness
             }
             $autoFoods = $auto['foods'];
             foreach ($autoFoods as $k => $v) {
-                if (in_array([$v['food_id']], $alreadyFoods)) {
+                if (in_array([$v['food_id']], $alreadyFoods)||in_array([$v['food_id']], $cancelFoods)) {
                     continue;
                 }
                 array_push($foodList, [
