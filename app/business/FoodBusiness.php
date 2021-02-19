@@ -47,7 +47,7 @@ class FoodBusiness
         $cancelFoods = [];
         if (count($foodDay)) {
             foreach ($foodDay as $k => $v) {
-                if (in_array([$v['f_id']], $alreadyFoods)||in_array([$v['f_id']], $cancelFoods)) {
+                if (in_array($v['f_id'], $alreadyFoods) || in_array($v['f_id'], $cancelFoods)) {
                     continue;
                 }
                 if ($v['status'] != FoodEnum::STATUS_DOWN) {
@@ -57,11 +57,9 @@ class FoodBusiness
                     ]);
                     array_push($alreadyFoods, $v['f_id']);
 
-                }else{
+                } else {
                     array_push($cancelFoods, $v['f_id']);
-
                 }
-                array_push($alreadyFoods, $v['f_id']);
             }
         }
 
@@ -71,7 +69,7 @@ class FoodBusiness
             }
             $autoFoods = $auto['foods'];
             foreach ($autoFoods as $k => $v) {
-                if (in_array([$v['food_id']], $alreadyFoods)||in_array([$v['food_id']], $cancelFoods)) {
+                if (in_array($v['food_id'], $alreadyFoods) || in_array($v['food_id'], $cancelFoods)) {
                     continue;
                 }
                 array_push($foodList, [
@@ -104,4 +102,5 @@ class FoodBusiness
         $repeatWeek = $repeatWeek == 0 ? 7 : $repeatWeek;
         return addDay(7 + ($repeatWeek - $w), \date('Y-m-d'));
 
-    }}
+    }
+}
