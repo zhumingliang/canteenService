@@ -69,7 +69,9 @@ class FoodBusiness
             }
             $autoFoods = $auto['foods'];
             foreach ($autoFoods as $k => $v) {
-                if (in_array($v['food_id'], $alreadyFoods) || in_array($v['food_id'], $cancelFoods)) {
+                if (in_array($v['food_id'], $alreadyFoods) ||
+                    in_array($v['food_id'], $cancelFoods) ||
+                    (strtotime($v['next_auto_time']) > strtotime(date('Y-m-d')))) {
                     continue;
                 }
                 array_push($foodList, [
