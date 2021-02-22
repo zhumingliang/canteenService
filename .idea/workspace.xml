@@ -4,6 +4,8 @@
     <list default="true" id="ba2358bb-d3af-4866-8525-6ea1a9f9923c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/business/FoodBusiness.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/business/FoodBusiness.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/business/NextMonthPayBusiness.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/business/NextMonthPayBusiness.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/task/getNextMonthPay.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/task/getNextMonthPay.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,14 +213,8 @@
       <workItem from="1612965409758" duration="4000" />
       <workItem from="1613655796958" duration="881000" />
       <workItem from="1613708654271" duration="2068000" />
-      <workItem from="1613811201675" duration="106000" />
-    </task>
-    <task id="LOCAL-00050" summary="测试清零账户">
-      <created>1607910954905</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1607910954905</updated>
+      <workItem from="1613811201675" duration="325000" />
+      <workItem from="1613996612077" duration="30000" />
     </task>
     <task id="LOCAL-00051" summary="测试清零账户">
       <created>1607963012818</created>
@@ -556,7 +552,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613711932505</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="自动上架更新">
+      <created>1613811328590</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1613811328590</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,10 +600,10 @@
     </state>
     <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1612798295534" />
     <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1610291012756" />
-    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2" timestamp="1613711932233">
+    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2" timestamp="1613811328371">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="330" y="23" key="CommitChangelistDialog2/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1613657496500" />
+    <state x="330" y="23" key="CommitChangelistDialog2/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1613811328371" />
     <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1613711932233" />
     <state x="530" y="310" key="NewPhpClassDialog" timestamp="1610290827588">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -614,10 +617,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="625" height="500" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1608704995546" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1613711934022">
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1613811330404">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1613657498224" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1613811330404" />
     <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1613711934022" />
   </component>
   <component name="XDebuggerManager">

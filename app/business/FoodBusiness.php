@@ -84,7 +84,6 @@ class FoodBusiness
                     'dinner_id' => $dinnerId
                 ]);
                 array_push($alreadyFoods, $v['food_id']);
-
             }
         }
 

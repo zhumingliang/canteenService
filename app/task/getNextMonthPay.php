@@ -14,8 +14,7 @@ class getNextMonthPay extends Task
 {
     public function configure()
     {
-        //$this->dailyAt("00:45");
-        $this->monthlyOn(); //设置任务的周期，每月初执行一次
+        $this->dailyAt("00:01"); //设置任务的周期，每月初执行一次
     }
 
     /**
@@ -25,7 +24,6 @@ class getNextMonthPay extends Task
     protected function execute()
     {
         try {
-            TaskLogT::create(['content' => '同步次月缴费开始']);
             (new NextMonthPayBusiness())->handle();
         } catch (\Exception $e) {
             TaskLogT::create(['content' => "同步次月缴费数据失败：" . $e->getMessage()]);
