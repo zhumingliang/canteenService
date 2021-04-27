@@ -10,6 +10,7 @@ use app\lib\exception\ParameterException;
 use app\lib\exception\SaveException;
 use app\model\AutomaticT;
 use app\model\FoodDayStateT;
+use app\model\FoodUpStatusT;
 use app\model\TaskLogT;
 
 class FoodBusiness
@@ -93,6 +94,12 @@ class FoodBusiness
                 throw new SaveException(['msg' => '上架失败']);
             }
         }
+
+        if (!FoodUpStatusT::info($dinnerId, $day))
+            //保存已上架状态
+            if (!FoodUpStatusT::saveInfo($dinnerId, $day, CommonEnum::STATE_IS_OK)) {
+                throw new SaveException(['msg' => '保存上架状态失败']);
+            }
 
     }
 

@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba2358bb-d3af-4866-8525-6ea1a9f9923c" name="Default Changelist" comment="">
+    <list default="true" id="ba2358bb-d3af-4866-8525-6ea1a9f9923c" name="Default Changelist" comment="自动上架更新">
+      <change afterPath="$PROJECT_DIR$/app/model/CompanyStaffT.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/FoodUpStatusT.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/PunishmentDetailT.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/PunishmentStrategyT.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/StaffPunishmentT.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/business/FoodBusiness.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/business/FoodBusiness.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/business/NextMonthPayBusiness.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/business/NextMonthPayBusiness.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/task/getNextMonthPay.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/task/getNextMonthPay.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/business/OrderBusiness.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/business/OrderBusiness.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/Index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/OrderParentT.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/OrderParentT.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/OrderUnusedV.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/OrderUnusedV.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,14 +222,15 @@
       <workItem from="1613655796958" duration="881000" />
       <workItem from="1613708654271" duration="2068000" />
       <workItem from="1613811201675" duration="325000" />
-      <workItem from="1613996612077" duration="30000" />
-    </task>
-    <task id="LOCAL-00051" summary="测试清零账户">
-      <created>1607963012818</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1607963012819</updated>
+      <workItem from="1613996612077" duration="2124000" />
+      <workItem from="1614145176118" duration="1498000" />
+      <workItem from="1614345174958" duration="14000" />
+      <workItem from="1614554566352" duration="598000" />
+      <workItem from="1614567835651" duration="837000" />
+      <workItem from="1614819256666" duration="2510000" />
+      <workItem from="1617893917104" duration="115000" />
+      <workItem from="1619363557414" duration="1735000" />
+      <workItem from="1619400074067" duration="19147000" />
     </task>
     <task id="LOCAL-00052" summary="测试清零账户">
       <created>1607963728960</created>
@@ -559,7 +568,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613811328590</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="自动上架更新">
+      <created>1613996662073</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1613996662073</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,50 +602,13 @@
     <MESSAGE value="自动上架更新" />
     <option name="LAST_COMMIT_MESSAGE" value="自动上架更新" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="300" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608515544776">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="300" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1608515544776" />
-    <state x="634" y="231" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608698815683">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="634" y="231" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1608698815683" />
-    <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612798295534">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1612798295534" />
-    <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1610291012756" />
-    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2" timestamp="1613811328371">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="330" y="23" key="CommitChangelistDialog2/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1613811328371" />
-    <state x="330" y="23" width="1050" height="947" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1613711932233" />
-    <state x="530" y="310" key="NewPhpClassDialog" timestamp="1610290827588">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="530" y="310" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1610290827588" />
-    <state x="613" y="440" key="NewPhpFileDialog" timestamp="1608688525351">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="613" y="440" key="NewPhpFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1608688525351" />
-    <state width="625" height="500" key="SwitcherDM" timestamp="1608704995546">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state width="625" height="500" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1608704995546" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1613811330404">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1613811330404" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1613711934022" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/business/OrderBusiness.php</url>
-          <line>18</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/app/business/FoodBusiness.php</url>
+          <line>97</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

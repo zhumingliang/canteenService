@@ -14,6 +14,12 @@ class OrderParentT extends Model
         return $this->belongsTo('DinnerT', 'dinner_id', 'id');
     }
 
+    public function staff()
+    {
+        return $this->belongsTo('CompanyStaffT', 'staff_id', 'id');
+    }
+
+
     public static function unUsedOutsiderOrder($consumption_time)
     {
         return self::where('used', CommonEnum::STATE_IS_FAIL)
@@ -22,10 +28,19 @@ class OrderParentT extends Model
             ->where('ordering_date', '<', $consumption_time)
             ->where('pay', 'paid')
             ->where('state', CommonEnum::STATE_IS_OK)
-            ->with(['dinner' => function ($query) {
-                $query->field('id,name');
-            }])
-            ->select()->toArray();
+            ->with(
+                [
+                    'dinner' => function ($query) {
+                        $query->field('id,name');
+                    },
+                    'staff' => function ($query) {
+                        $query->field('id,status');
+                    }
+                ]
+            )
+            ->limit(0,100)
+            ->select()
+            ->toArray();
     }
 
 }

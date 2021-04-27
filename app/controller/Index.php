@@ -10,10 +10,12 @@ use app\business\MachineBusiness;
 use app\business\NextMonthPayBusiness;
 use app\business\OrderBusiness;
 use app\business\ReceptionBusiness;
+use app\lib\exception\SuccessMessage;
 use app\lib\exception\SuccessMessageWithData;
 use app\model\AccountRecordsT;
 use app\model\AuthT;
 use app\model\LogT;
+use app\model\OrderParentT;
 use app\model\TaskLogT;
 use think\facade\Cache;
 use think\Request;
@@ -23,13 +25,11 @@ class Index extends BaseController
 {
     public function index(Request $request)
     {
-        try {
-           // (new NextMonthPayBusiness())->handle();
-            TaskLogT::create(['content' => '自动上架菜品']);
-            (new FoodBusiness())->autoUpFoods();
-        } catch (\Exception $e) {
-            TaskLogT::create(['content' => "自动上架菜品：" . $e->getMessage()]);
-        }
+        $consumption_time = "2021-04-8";
+        $parentOrders = OrderParentT::unUsedOutsiderOrder($consumption_time);
+      //  return json($parentOrders);
+        $a = (new OrderBusiness())->sortOrders2($parentOrders);
+        return json($a);
     }
 
     public function hello($name = 'ThinkPHP6')
@@ -37,7 +37,6 @@ class Index extends BaseController
 
         //  return 'hello,' . $name;
     }
-
 
 
 }

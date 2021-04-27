@@ -25,10 +25,10 @@ class NextMonthPayBusiness
         if (!empty($isNextMonthPay)) {
             $orderConsumptionDate = date("Y-m", strtotime("-1 month"));
             $nowDate = date('d');
-            $payBeginDate = explode('-', $isNextMonthPay[0]['is_pay_day']);
-            if ($nowDate == $payBeginDate[0]) {
-                $orderConsumptionList = [];
-                foreach ($isNextMonthPay as $k => $v) {
+            $orderConsumptionList = [];
+            foreach ($isNextMonthPay as $k => $v) {
+                $payBeginDate = explode('-', $v['is_pay_day']);
+                if ($nowDate == $payBeginDate[0]) {
                     //查询已开启次月缴费企业的上一个月消费数据
                     $lastMonthOrderConsumption = (new OrderConsumptionV())->getOrderConsumption($v['c_id'], $orderConsumptionDate);
                     if (!empty($lastMonthOrderConsumption)) {
