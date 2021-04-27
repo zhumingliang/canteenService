@@ -123,7 +123,13 @@ class OrderBusiness
                 } else {
                     if ($v['strategy_type'] == 'one') {
                         // 检测用户惩罚策略
-                        $violationCount = $this->checkPunishment($v['staff_id'], $v['canteen_id'], $v['staff_type_id']);
+                        if ($staffStatus == 3) {
+                            //白名单
+                            $violationCount = 0;
+                        } else {
+                            $violationCount = $this->checkPunishment($v['staff_id'], $staffStatus, $v['canteen_id'], $v['staff_type_id']);
+
+                        }
                         OrderT::update(
                             [
                                 'consumption_type' => 'no_meals_ordered',
@@ -159,7 +165,12 @@ class OrderBusiness
                         if (in_array($v['order_id'], $parentPunishmentArr)) {
                             $violationCount = 0;
                         } else {
-                            $violationCount = $this->checkPunishment($v['staff_id'], $v['canteen_id'], $v['staff_type_id']);
+                            if ($staffStatus == 3) {
+                                //白名单
+                                $violationCount = 0;
+                            } else {
+                                $violationCount = $this->checkPunishment($v['staff_id'], $staffStatus, $v['canteen_id'], $v['staff_type_id']);
+                            }
                             array_push($parentPunishmentArr, $v['order_id']);
                         }
                         OrderParentT::update(
@@ -199,7 +210,12 @@ class OrderBusiness
                     ]);
                 } else {
                     // 检测用户惩罚策略
-                    $violationCount = $this->checkPunishment($v['staff_id'], $v['canteen_id'], $v['staff_type_id']);
+                    if ($staffStatus == 3) {
+                        //白名单
+                        $violationCount = 0;
+                    } else {
+                        $violationCount = $this->checkPunishment($v['staff_id'], $staffStatus, $v['canteen_id'], $v['staff_type_id']);
+                    }
                     $subOrder = OrderSubT::where('order_id', $v['id'])
                         ->where('state', CommonEnum::STATE_IS_OK)
                         ->select();
@@ -281,7 +297,7 @@ class OrderBusiness
     }
 
 
-    public function checkPunishment($staffId, $canteenId, $staffTypeId)
+    public function checkPunishment($staffId, $staffStatus, $canteenId, $staffTypeId)
     {
         //检查有没有设置惩罚策略
         $punishment = PunishmentStrategyT::punishment($canteenId, $staffTypeId);
@@ -309,6 +325,14 @@ class OrderBusiness
                     'id' => $staffId,
                     'status' => 4
                 ]);
+            } else {
+                if ($staffStatus == 1) {
+                    CompanyStaffT::update([
+                        'id' => $staffId,
+                        'status' => 2
+                    ]);
+                }
+
             }
             //更新用户违规次数
             StaffPunishmentT::update([
