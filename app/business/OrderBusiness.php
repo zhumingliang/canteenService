@@ -17,70 +17,6 @@ use function Composer\Autoload\includeFile;
 
 class OrderBusiness
 {
-    /* public function handelUnusedOrder2()
-    {
-        $consumption_time = date('Y-m-d');
-        $orders = (new  OrderUnusedV())->orders($consumption_time);
-        $parentMoneyArr = [];
-        $parentCancelArr = [];
-        if (count($orders)) {
-            $orders = $this->sortOrders($orders);
-            foreach ($orders as $k => $v) {
-                $staffStatus = $v['status'];
-                if ($staffStatus == 4) {
-                    //用户已经在黑名单-取消订单
-                    if ($v['strategy_type'] == 'one') {
-                        OrderT::update(['state', CommonEnum::STATE_IS_FAIL],
-                            ['id' => $v['id']]);
-
-                    } else {
-                        OrderSubT::update([
-                            'state', CommonEnum::STATE_IS_FAIL],
-                            ['id' => $v['id']
-                            ]);
-                        if (!in_array($v['order_id'], $parentCancelArr)) {
-                            OrderParentT::update([
-                                'id' => $v['order_id'],
-                                'state' => CommonEnum::STATE_IS_FAIL
-                            ]);
-                            array_push($parentCancelArr, $v['order_id']);
-                        }
-                    }
-
-                } else {
-                    //检测是否违规
-
-                    if ($v['strategy_type'] == 'one') {
-                        OrderT::update(['consumption_type' => 'no_meals_ordered',
-                            'money' => 0,
-                            'unused_handel' => CommonEnum::STATE_IS_OK,
-                            'sub_money' => $v['no_meal_sub_money']], ['id' => $v['id']]);
-
-                    } else {
-                        OrderSubT::update([
-                            'consumption_type' => 'no_meals_ordered',
-                            'money' => 0,
-                            'unused_handel' => CommonEnum::STATE_IS_OK,
-                            'sub_money' => $v['no_meal_sub_money']
-                        ], ['id' => $v['id']]);
-                        if (key_exists($v['order_id'], $parentMoneyArr)) {
-                            $parentMoney = $parentMoneyArr[$v['order_id']];
-                        } else {
-                            $parentMoney = $v['parent_money'];
-                        }
-                        $newParentMoney = $parentMoney - $v['order_money'] - $v['order_sub_money'] + $v['no_meal_sub_money'];
-                        OrderParentT::update(['money' => $newParentMoney
-                        ], ['id' => $v['order_id']]);
-                        $parentMoneyArr[$v['order_id']] = $newParentMoney;
-
-                    }
-
-                }
-
-            }
-        }
-    }*/
-
     public function handelUnusedOrder()
     {
         $consumption_time = date('Y-m-d');
@@ -127,7 +63,7 @@ class OrderBusiness
                             //白名单
                             $violationCount = 0;
                         } else {
-                            $violationCount = $this->checkPunishment($v['staff_id'], $staffStatus, $v['canteen_id'], $v['staff_type_id']);
+                            $violationCount = $this->checkPunishment($v['staff_id'], $staffStatus, $v['company_id'], $v['staff_type_id']);
 
                         }
                         OrderT::update(
@@ -169,7 +105,7 @@ class OrderBusiness
                                 //白名单
                                 $violationCount = 0;
                             } else {
-                                $violationCount = $this->checkPunishment($v['staff_id'], $staffStatus, $v['canteen_id'], $v['staff_type_id']);
+                                $violationCount = $this->checkPunishment($v['staff_id'], $staffStatus, $v['company_id'], $v['staff_type_id']);
                             }
                             array_push($parentPunishmentArr, $v['order_id']);
                         }
@@ -214,7 +150,7 @@ class OrderBusiness
                         //白名单
                         $violationCount = 0;
                     } else {
-                        $violationCount = $this->checkPunishment($v['staff_id'], $staffStatus, $v['canteen_id'], $v['staff_type_id']);
+                        $violationCount = $this->checkPunishment($v['staff_id'], $staffStatus, $v['company_id'], $v['staff_type_id']);
                     }
                     $subOrder = OrderSubT::where('order_id', $v['id'])
                         ->where('state', CommonEnum::STATE_IS_OK)
@@ -297,10 +233,10 @@ class OrderBusiness
     }
 
 
-    public function checkPunishment($staffId, $staffStatus, $canteenId, $staffTypeId)
+    public function checkPunishment($staffId, $staffStatus, $companyId, $staffTypeId)
     {
         //检查有没有设置惩罚策略
-        $punishment = PunishmentStrategyT::punishment($canteenId, $staffTypeId);
+        $punishment = PunishmentStrategyT::punishment($companyId, $staffTypeId);
         $staffNoMealCount = 0;
         if ($punishment && !empty($punishment['detail']['count'])) {
             $punishmentNoMealCount = $punishment['detail']['count'];

@@ -4,6 +4,7 @@
     <list default="true" id="ba2358bb-d3af-4866-8525-6ea1a9f9923c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/business/OrderBusiness.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/business/OrderBusiness.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/PunishmentStrategyT.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/PunishmentStrategyT.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,14 +222,8 @@
       <workItem from="1617893917104" duration="115000" />
       <workItem from="1619363557414" duration="1735000" />
       <workItem from="1619400074067" duration="19692000" />
-      <workItem from="1619541454059" duration="348000" />
-    </task>
-    <task id="LOCAL-00053" summary="测试清零账户">
-      <created>1608194143110</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1608194143110</updated>
+      <workItem from="1619541454059" duration="405000" />
+      <workItem from="1619596079155" duration="123000" />
     </task>
     <task id="LOCAL-00054" summary="测试清零账户">
       <created>1608197598772</created>
@@ -566,7 +561,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619496121526</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="惩罚策略更新">
+      <created>1619541809230</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1619541809230</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

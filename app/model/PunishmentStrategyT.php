@@ -15,9 +15,9 @@ class PunishmentStrategyT extends Model
         return $this->hasMany('PunishmentDetailT', 'strategy_id', 'id');
     }
 
-    public static function punishment($canteenId, $staffTypeId)
+    public static function punishment($companyId, $staffTypeId)
     {
-        return self::where('canteen_id', $canteenId)
+        return self::where('company_id', $companyId)
             ->where('staff_type_id', $staffTypeId)
             ->with([
                 'detail' => function ($query) {
