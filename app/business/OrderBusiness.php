@@ -11,6 +11,7 @@ use app\model\OrderParentT;
 use app\model\OrderSubT;
 use app\model\OrderT;
 use app\model\OrderUnusedV;
+use app\model\PunishmentRecordsT;
 use app\model\PunishmentStrategyT;
 use app\model\StaffPunishmentT;
 use function Composer\Autoload\includeFile;
@@ -124,7 +125,27 @@ class OrderBusiness
                         (new AccountBusiness())->saveAccountRecords($v['ordering_date'], $v['canteen_id'], $v['no_meal_sub_money'], $v['strategy_type'],
                             $v['id'], $v['company_id'], $v['staff_id'], $v['dinner']);
                     }
+
+                    //生成违规记录
+                    if ($violationCount > 0) {
+                        PunishmentRecordsT::create(
+                            [
+                                'company_id' => $v['company_id'],
+                                'canteen_id' => $v['canteen_id'],
+                                'department_id' => $v['department_id'],
+                                'dinner_id' => $v['dinner_id'],
+                                'staff_id' => $v['staff_id'],
+                                'money' => $v['no_meal_sub_money'],
+                                'type' => 'no_meal',
+                                'consumption_type' => $v['strategy_type'],
+                                'order_id' => $v['order_id'],
+                            ]
+                        );
+
+                    }
                 }
+
+
             }
         }
 
@@ -185,6 +206,24 @@ class OrderBusiness
                     if ($allMoney > 0) {
                         (new AccountBusiness())->saveAccountRecords($v['ordering_date'], $v['canteen_id'], $allMoney, 'more',
                             $v['id'], $v['company_id'], $v['staff_id'], $v['dinner']['name'], 1);
+
+                    }
+
+                    //生成违规记录
+                    if ($violationCount > 0) {
+                        PunishmentRecordsT::create(
+                            [
+                                'company_id' => $v['company_id'],
+                                'canteen_id' => $v['canteen_id'],
+                                'department_id' => $v['department_id'],
+                                'dinner_id' => $v['dinner_id'],
+                                'staff_id' => $v['staff_id'],
+                                'money' => $v['no_meal_sub_money'],
+                                'type' => 'no_meal',
+                                'consumption_type' =>'more',
+                                'order_id' => $v['id'],
+                            ]
+                        );
 
                     }
 
