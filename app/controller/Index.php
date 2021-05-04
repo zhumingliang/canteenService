@@ -25,11 +25,6 @@ class Index extends BaseController
 {
     public function index(Request $request)
     {
-        $consumption_time = "2021-04-8";
-        $parentOrders = OrderParentT::unUsedOutsiderOrder($consumption_time);
-      //  return json($parentOrders);
-        $a = (new OrderBusiness())->sortOrders2($parentOrders);
-        return json($a);
     }
 
     public function hello($name = 'ThinkPHP6')

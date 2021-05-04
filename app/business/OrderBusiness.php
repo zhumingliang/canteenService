@@ -14,12 +14,14 @@ use app\model\OrderUnusedV;
 use app\model\PunishmentRecordsT;
 use app\model\PunishmentStrategyT;
 use app\model\StaffPunishmentT;
+use think\facade\Db;
 use function Composer\Autoload\includeFile;
 
 class OrderBusiness
 {
     public function handelUnusedOrder()
     {
+        // Db::startTrans();
         $consumption_time = date('Y-m-d');
         //一次消费订单+非外卖多次扣费子订单
         $orders = (new  OrderUnusedV())->orders($consumption_time);
@@ -34,7 +36,7 @@ class OrderBusiness
                     if ($v['strategy_type'] == 'one') {
                         OrderT::update(
                             [
-                                'state', CommonEnum::STATE_IS_FAIL
+                                'state' => CommonEnum::STATE_IS_FAIL
                             ],
                             [
                                 'id' => $v['id']
@@ -43,7 +45,7 @@ class OrderBusiness
 
                     } else {
                         OrderSubT::update([
-                            'state', CommonEnum::STATE_IS_FAIL],
+                            'state' => CommonEnum::STATE_IS_FAIL],
                             [
                                 'id' => $v['id']
                             ]
@@ -65,7 +67,6 @@ class OrderBusiness
                             $violationCount = 0;
                         } else {
                             $violationCount = $this->checkPunishment($v['staff_id'], $staffStatus, $v['company_id'], $v['staff_type_id']);
-
                         }
                         OrderT::update(
                             [
@@ -130,6 +131,7 @@ class OrderBusiness
                     if ($violationCount > 0) {
                         PunishmentRecordsT::create(
                             [
+                                'day' => $v['ordering_date'],
                                 'company_id' => $v['company_id'],
                                 'canteen_id' => $v['canteen_id'],
                                 'department_id' => $v['department_id'],
@@ -172,6 +174,7 @@ class OrderBusiness
                         $violationCount = 0;
                     } else {
                         $violationCount = $this->checkPunishment($v['staff_id'], $staffStatus, $v['company_id'], $v['staff_type_id']);
+                        echo $violationCount;
                     }
                     $subOrder = OrderSubT::where('order_id', $v['id'])
                         ->where('state', CommonEnum::STATE_IS_OK)
@@ -213,6 +216,7 @@ class OrderBusiness
                     if ($violationCount > 0) {
                         PunishmentRecordsT::create(
                             [
+                                'day' => $v['ordering_date'],
                                 'company_id' => $v['company_id'],
                                 'canteen_id' => $v['canteen_id'],
                                 'department_id' => $v['department_id'],
@@ -220,7 +224,7 @@ class OrderBusiness
                                 'staff_id' => $v['staff_id'],
                                 'money' => $v['no_meal_sub_money'],
                                 'type' => 'no_meal',
-                                'consumption_type' =>'more',
+                                'consumption_type' => 'more',
                                 'order_id' => $v['id'],
                             ]
                         );
@@ -231,6 +235,7 @@ class OrderBusiness
             }
 
         }
+        // Db::rollback();
     }
 
 
@@ -317,7 +322,6 @@ class OrderBusiness
             ]);
 
         }
-
         return $staffNoMealCount;
     }
 

@@ -12,7 +12,7 @@ class PunishmentStrategyT extends Model
 {
     public function detail()
     {
-        return $this->hasMany('PunishmentDetailT', 'strategy_id', 'id');
+        return $this->hasOne('PunishmentDetailT', 'strategy_id', 'id');
     }
 
     public static function punishment($companyId, $staffTypeId)
@@ -25,7 +25,7 @@ class PunishmentStrategyT extends Model
                         ->where('state', CommonEnum::STATE_IS_OK)
                         ->field('id,strategy_id,count');
                 }
-            ])->find();
+            ])->find()->toArray();
 
     }
 
