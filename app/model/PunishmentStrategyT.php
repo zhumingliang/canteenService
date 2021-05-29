@@ -25,7 +25,7 @@ class PunishmentStrategyT extends Model
                         ->where('state', CommonEnum::STATE_IS_OK)
                         ->field('id,strategy_id,count');
                 }
-            ])->find()->toArray();
+            ])->find();
 
     }
 

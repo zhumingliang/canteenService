@@ -25,6 +25,7 @@ class Index extends BaseController
 {
     public function index(Request $request)
     {
+        (new OrderBusiness())->handelUnusedOrder();
     }
 
     public function hello($name = 'ThinkPHP6')
