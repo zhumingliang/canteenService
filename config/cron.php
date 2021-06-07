@@ -10,5 +10,7 @@ return [
         \app\task\checkMachine2::class,
         \app\task\checkMachine3::class,
         \app\task\getNextMonthPay::class,
+        \app\task\Test::class,
+        \app\task\material::class,
     ]
 ];

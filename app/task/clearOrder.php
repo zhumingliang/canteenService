@@ -29,7 +29,7 @@ class clearOrder extends Task
             (new OrderBusiness())->handelUnusedOrder();
             (new ReceptionBusiness())->handelReception();
         } catch (\Exception $e) {
-            TaskLogT::create(['msg' => "批量处理未订餐就餐失败：" . $e->getMessage()]);
+            TaskLogT::create(['content' => "批量处理未订餐就餐失败：" . $e->getMessage()]);
         }
 
     }

@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba2358bb-d3af-4866-8525-6ea1a9f9923c" name="Default Changelist" comment="惩罚策略更新">
-      <change afterPath="$PROJECT_DIR$/app/task/Test.php" afterDir="false" />
+    <list default="true" id="ba2358bb-d3af-4866-8525-6ea1a9f9923c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/business/Material.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/FoodMaterialT.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/MaterialOrderT.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/OrderDetailT.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/SubFoodT.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/task/material.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/canteenService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/canteenService.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/DinnerT.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/DinnerT.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/task/Test.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/task/Test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/task/clearOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/task/clearOrder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cron.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cron.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +94,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1ak12v4TzgI55Z2ARjgMZCpTHsH" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -97,6 +109,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -227,14 +240,9 @@
       <workItem from="1620131947834" duration="3412000" />
       <workItem from="1620663856329" duration="2000" />
       <workItem from="1622300463920" duration="279000" />
-      <workItem from="1622305683246" duration="625000" />
-    </task>
-    <task id="LOCAL-00058" summary="测试">
-      <created>1608286196137</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1608286196137</updated>
+      <workItem from="1622305683246" duration="719000" />
+      <workItem from="1622307275903" duration="540000" />
+      <workItem from="1623033366865" duration="6262000" />
     </task>
     <task id="LOCAL-00059" summary="测试">
       <created>1608305827728</created>
@@ -572,7 +580,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622305908227</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="惩罚策略更新">
+      <created>1622306364546</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1622306364546</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
